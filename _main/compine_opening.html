@@ -1,0 +1,63 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Compine</title>
+            <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background-color: #f2f2f2;
+                    overflow: hidden;
+                    transition: opacity 2s;
+                }
+                .logo-container {
+                    display: flex;
+                    align-items: center;
+                    opacity: 1;
+                    transition: opacity 2s;
+                }
+                .logo {
+                    width: 100px;
+                    height: auto;
+                    margin-right: 20px;
+                }
+                .site-name {
+                    font-size: 48px;
+                    font-weight: bold;
+                    color: #4285f4;
+                    opacity: 0;
+                    animation: textAppear 3s forwards;
+                }
+                @keyframes textAppear {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="logo-container">
+                <img src="https://www.cjoint.com/doc/24_11/NKquHQQMUIP_b22f9be8-076d-47a5-9dc8-7a2b13cafb27-removebg-preview.png" alt="Compine Logo" class="logo">
+                <div class="site-name">Compine</div>
+            </div>
+            <script>
+                setTimeout(() => {
+                    document.body.style.opacity = 0;
+                    setTimeout(() => {
+                        window.location.href = 'http://127.0.0.1:5000/home'; 
+                    }, 2000);
+                }, 4000);
+            </script>
+        </body>
+        </html>
+        
